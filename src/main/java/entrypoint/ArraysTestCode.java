@@ -1,5 +1,6 @@
 package entrypoint;
 
+import arrays.ArrayQueue;
 import arrays.ArrayStack;
 
 /**
@@ -8,6 +9,7 @@ import arrays.ArrayStack;
 public class ArraysTestCode {
 
     public static void main(String[] args) {
+        System.out.println("===================Stack=============================");
         ArrayStack arrayStack = new ArrayStack();
         //arrayStack.peek();
         //arrayStack.pop();
@@ -42,10 +44,28 @@ public class ArraysTestCode {
         arrayStack.pop();
         arrayStack.pop();
         System.out.println(arrayStack); // Check pop implementation empty
-        arrayStack.peek(); //Test throw exception
+        //arrayStack.peek(); //Test throw exception
 
-
-
-
+        System.out.println();
+        System.out.println("===================Queue=============================");
+        ArrayQueue arrayQueue = new ArrayQueue();
+        //arrayQueue.dequeue();
+        //arrayQueue.peek();
+        System.out.println(arrayQueue); //empty stack
+        arrayQueue.enqueue(1);
+        System.out.println(arrayQueue); // one element
+        arrayQueue.enqueue(2);
+        arrayQueue.enqueue(3);
+        arrayQueue.enqueue(4);
+        System.out.println(arrayQueue); // 4 elements
+        arrayQueue.enqueue(5);
+        arrayQueue.enqueue(6);
+        arrayQueue.enqueue(7);
+        System.out.println(arrayQueue); //elements checking the dynamic array implementation arrayQueue lenght is 10
+        arrayQueue.dequeue();
+        arrayQueue.dequeue();
+        arrayQueue.dequeue();
+        arrayQueue.dequeue();
+        System.out.println(arrayQueue); //remove 4 elements and check the location of frontIndex
     }
 }
