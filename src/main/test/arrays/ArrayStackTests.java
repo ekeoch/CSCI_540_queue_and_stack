@@ -123,4 +123,18 @@ public class ArrayStackTests {
         assertFalse(arrayStack.isEmpty());
     }
 
+    @Test
+    public void testToStringEmptyStack(){
+        assertEquals("top [ ] bottom\t(empty stack)", arrayStack.toString());
+    }
+
+    @Test
+    public void testToStringNonEmptyStack(){
+        arrayStack.push(1);
+        arrayStack.push(2);
+        arrayStack.push(3);
+
+        assertEquals("top [ 3 2 1 ] bottom\t(stack with 3 elements)", arrayStack.toString());
+    }
+
 }
